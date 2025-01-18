@@ -1,0 +1,645 @@
+%centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%h3-italic {
+  font-family: "Allura", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+
+%h2-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 12px 82px;
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    height: 40px;
+    width: 141px;
+    @extend %centered;
+    column-gap: 8px;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #181c29;
+  }
+  &__menu {
+    display: flex;
+    column-gap: 8px;
+  }
+  &__item {
+    height: 40px;
+    padding: 0 20px;
+    @extend %centered;
+    border-radius: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #181c29;
+    transition: 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: rgba(255, 70, 70, 0.1);
+        color: #ff4646;
+      }
+    }
+  }
+  &__burger {
+    display: none;
+  }
+}
+
+.promo {
+  padding: 60px 8px;
+  background:
+    url("../../../assets/images/bg-snow.png") 50% 50% / cover no-repeat,
+    url("../../../assets/images/bg-ball.png") 50% 50% / cover no-repeat;
+  background-color: #ff4646;
+  border-radius: 20px 20px 0 0;
+  &__wrapper {
+    max-width: 429px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  &__subtitle {
+    @extend %h3-italic;
+    text-align: center;
+    color: #fff;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    span {
+      position: relative;
+      left: 3px;
+    }
+  }
+}
+
+.btn {
+  border-radius: 20px;
+  width: 235px;
+  height: 56px;
+  @extend %centered;
+  background-color: #181c29;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.6s ease;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #fff;
+      color: #181c29;
+    }
+  }
+}
+
+.about {
+  padding: 60px 82px;
+  background: url("../../../assets/images/bg-snow.png") center center/cover no-repeat;
+  background-color: #ff4646;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    div {
+      max-height: 528px;
+    }
+  }
+  &__left {
+    width: 50%;
+    padding: 100px 152px 100px 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+  }
+  &__subtitle {
+    @extend %h3-italic;
+    color: #ff4646;
+  }
+  &__title {
+    @extend %h2-title;
+    color: #181c29;
+  }
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+    color: #181c29;
+  }
+  &__right {
+    width: 50%;
+    border-radius: 20px;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
+
+.slider {
+  padding: 60px 82px;
+  background: url("../../../assets/images/bg-snow.png") 50% 50% / cover no-repeat;
+  background-color: #ff4646;
+  overflow: hidden;
+  &__subtitle {
+    @extend %h3-italic;
+    text-align: center;
+    color: #fff;
+  }
+  &__title {
+    margin-top: 12px;
+    @extend %h2-title;
+    text-align: center;
+    color: #fff;
+  }
+  &__wrapper {
+    margin-top: 20px;
+  }
+  &__line {
+    display: flex;
+    align-items: center;
+    column-gap: 20.5px;
+    transform: translateX(0);
+    transition: transform 1s ease;
+    img {
+      border-radius: 20px;
+    }
+  }
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+  &__buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+  }
+  &__btn {
+    @extend %centered;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: inherit;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:not(:disabled):hover {
+        background-color: #fff;
+        svg {
+          path {
+            stroke: #ff4646;
+          }
+        }
+      }
+    }
+  }
+  &__btn:disabled {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: auto;
+    svg {
+      path {
+        stroke: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+  #slider-btn-left {
+    transform: rotate(180deg);
+  }
+}
+
+.gifts {
+  padding: 60px 82px;
+  background: url("../../../assets/images/bg-snow.png") 50% 50% / cover no-repeat;
+  background-color: #ff4646;
+  &__subtitle {
+    @extend %h3-italic;
+    text-align: center;
+    color: #fff;
+  }
+  &__title {
+    margin-top: 11px;
+    @extend %h2-title;
+    text-align: center;
+    color: #fff;
+  }
+  &__wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 342px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 342px;
+    border-radius: 20px;
+    background-color: #ecf3f8;
+    cursor: pointer;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        .gifts__item-title {
+          color: #ff4646;
+        }
+      }
+    }
+  }
+  &__item-bottom {
+    height: 112px;
+    padding: 0 20px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  &__item-subtitle {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  &__item-title {
+    margin-top: 9px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #181c29;
+    transition: 0.6s ease;
+  }
+  &__item-subtitle_work {
+    color: #4361ff;
+  }
+  &__item-subtitle_health {
+    color: #06a44f;
+  }
+  &__item-subtitle_harmony {
+    color: #ff43f7;
+  }
+}
+
+.timer {
+  padding: 120px 82px;
+  background:
+    url("../../../assets/images/bg-snow.png") 50% 50% / cover no-repeat,
+    url("../../../assets/images/bg-forest.png") 50% 50% / cover no-repeat;
+  background-color: #ff4646;
+  border-radius: 0 0 20px 20px;
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 426px;
+    padding: 60px 0;
+    text-align: center;
+  }
+  &__title {
+    @extend %h2-title;
+    color: #fff;
+  }
+  &__btn {
+    margin: 19px auto 0 auto;
+  }
+  &__subtitle {
+    @extend %h3-italic;
+    color: #fff;
+    margin-top: 20px;
+  }
+  &__items-wrapper {
+    margin: 0 auto;
+    margin-top: 7px;
+    width: 344px;
+    height: 72px;
+    @extend %centered;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+  }
+  &__item {
+    width: 80px;
+    height: 52px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 1px;
+      right: 0;
+      top: 14px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+  &__item:last-child::after {
+    content: none;
+  }
+  &__time {
+    height: 35px;
+    @extend %h2-title;
+    text-align: center;
+    color: #fff;
+  }
+  &__descr {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.footer {
+  padding: 60px 82px;
+  background-color: #fff;
+  &__top-block {
+    display: flex;
+    width: 100%;
+    gap: 11px;
+  }
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 12px;
+    padding: 20px;
+    height: 204px;
+    background-color: #ecf3f8;
+    border-radius: 20px;
+    cursor: pointer;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        .footer__title,
+        .footer__subtitle {
+          color: #ff4646;
+        }
+      }
+    }
+  }
+  &__title {
+    @extend %h2-title;
+    color: #181c29;
+    transition: 0.6s ease;
+    position: relative;
+    left: 2px;
+    top: 1px;
+  }
+  &__subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #181c29;
+    transition: 0.6s ease;
+  }
+  &__social-block {
+    margin-top: 60px;
+    @extend %centered;
+    column-gap: 12px;
+    a {
+      @extend %centered;
+      width: 40px;
+      height: 40px;
+      svg {
+        path {
+          transition: 0.6s ease;
+        }
+      }
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          svg {
+            path {
+              stroke: #ff4646;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__rights {
+    margin-top: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+    text-align: center;
+    color: #181c29;
+  }
+  &__author {
+    margin-top: 12px;
+    @extend %h3-italic;
+    text-align: center;
+    color: #181c29;
+    transition: 0.6s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #ff4646;
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 28, 41, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__body {
+    min-height: 100%;
+    padding: 8px;
+    @extend %centered;
+  }
+  &__content {
+    max-width: 400px;
+    background-color: #ecf3f8;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+  }
+  &__img {
+    height: 230px;
+    object-fit: cover;
+  }
+  &__bottom {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  &__subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  &__subtitle_work {
+    color: #4361ff;
+  }
+  &__subtitle_health {
+    color: #06a44f;
+  }
+  &__subtitle_harmony {
+    color: #ff43f7;
+  }
+  &__title {
+    margin-top: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #181c29;
+  }
+  &__descr {
+    margin-top: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+    color: #181c29;
+  }
+  &__text {
+    margin-top: 21px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #181c29;
+  }
+  &__powers-wrapper {
+    margin-top: 8px;
+  }
+  &__powers-item {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 12px;
+    align-items: center;
+  }
+  &__power-name,
+  &__power-number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+    color: #181c29;
+  }
+  &__power-name {
+    flex-grow: 1;
+  }
+  &__power-icons {
+    @extend %centered;
+    column-gap: 8px;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    &_opacity {
+      opacity: 0.2;
+    }
+  }
+  &__close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@import "media";

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="../../assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/modern-normalize.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <section class="header">
+          <a href="#" class="header__logo">
+            <img src="../../assets/icons/snowflake.svg" alt="logo">
+            <h2 class="header__title">the gifts</h2>
+          </a>
+          <nav>
+            <ul class="header__menu">
+              <li><a href="../gifts/index.html" class="header__item">gifts</a></li>
+              <li><a href="#about" class="header__item">about</a></li>
+              <li><a href="#gifts" class="header__item">best</a></li>
+              <li><a href="#contacts" class="header__item">contacts</a></li>
+            </ul>
+          </nav>
+          <div class="header__burger">
+            <span></span>
+            <span></span>
+          </div>
+        </section>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="promo">
+          <div class="promo__wrapper">
+            <h3 class="promo__subtitle">Merry Christmas</h3>
+            <h1 class="promo__title">Gift yourself the magic of new <span>possibilities</span></h1>
+            <a href="../gifts/index.html" class="promo__btn btn">Explore Magical Gifts</a>
+            <h3 class="promo__subtitle">and Happy New Year</h3>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="about__wrapper">
+            <div class="about__left">
+              <h3 class="about__subtitle">About</h3>
+              <h2 class="about__title">Unleash your inner superhero!</h2>
+              <p class="about__text">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</p>
+            </div>
+            <div class="about__right">
+              <img src="../../assets/images/santa.png" alt="santa" class="about__image">
+            </div>
+          </div>
+        </section>
+        <section class="slider">
+          <h3 class="slider__subtitle">Become Happier!</h3>
+          <h2 class="slider__title">in the new 2025</h2>
+          <div class="slider__wrapper">
+            <div class="slider__line">
+              <div class="slider__text">live</div>
+              <img src="../../assets/images/snowman.svg" alt="snowman">
+              <div class="slider__text">create</div>
+              <img src="../../assets/images/christmas-trees.svg" alt="trees">
+              <div class="slider__text">love</div>
+              <img src="../../assets/images/christmas-tree-ball.svg" alt="ball">
+              <div class="slider__text">dream</div>
+              <img src="../../assets/images/fairytale-house.svg" alt="house">
+            </div>
+          </div>
+          <div class="slider__buttons">
+            <button class="slider__btn" id="slider-btn-left" disabled>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="slider__btn" id="slider-btn-right">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </section>
+        <section class="gifts" id="gifts">
+          <h3 class="gifts__subtitle">Best Gifts</h3>
+          <h2 class="gifts__title">especially for you</h2>
+          <div class="gifts__wrapper"></div>
+        </section>
+        <section class="timer">
+          <div class="timer__wrapper">
+            <h2 class="timer__title">Ready to start your journey to a better version of yourself?</h2>
+            <a href="../gifts/index.html" class="timer__btn btn">Explore Magical Gifts</a>
+            <h3 class="timer__subtitle">The New Year is Coming Soon...</h3>
+            <div class="timer__items-wrapper">
+              <div class="timer__item">
+                <div class="timer__time" id="days">47</div>
+                <div class="timer__descr">days</div>
+              </div>
+              <div class="timer__item">
+                <div class="timer__time" id="hours">5</div>
+                <div class="timer__descr">hours</div>
+              </div>
+              <div class="timer__item">
+                <div class="timer__time" id="minutes">34</div>
+                <div class="timer__descr">minutes</div>
+              </div>
+              <div class="timer__item">
+                <div class="timer__time" id="seconds">12</div>
+                <div class="timer__descr">seconds</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <section class="footer" id="contacts">
+          <div class="footer__top-block">
+            <a href="tel:+375291112233" class="footer__item">
+              <img src="../../assets/icons/santa-claus.svg" alt="santa">
+              <h2 class="footer__title">+375 (29) 111-22-33</h2>
+              <h3 class="footer__subtitle">Call Us</h3>
+            </a>
+            <a href="https://www.google.com/maps/place/%D0%90%D0%BA%D1%82%D0%B0%D1%83/@43.6596393,51.0901054,12z/data=!3m1!4b1!4m6!3m5!1s0x41b4321732bc75d7:0x7614e1e6630a7769!8m2!3d43.6588079!4d51.1974563!16zL20vMDJnemxn?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" class="footer__item" target="_blank">
+              <img src="../../assets/icons/christmas-tree.svg" alt="tree">
+              <h2 class="footer__title">Magic forest</h2>
+              <h3 class="footer__subtitle">meet us</h3>
+            </a>
+            <a href="mailto:gifts@magic.com" class="footer__item">
+              <img src="../../assets/icons/snake.svg" alt="snake">
+              <h2 class="footer__title">gifts@magic.com</h2>
+              <h3 class="footer__subtitle">write us</h3>
+            </a>
+          </div>
+          <div class="footer__social-block">
+            <a href="https://t.me/merumerum" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/RollingScopesSchool" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/rsschool_news/" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#181C29" stroke-width="1.5"/>
+                <path d="M17.5 6.51L17.51 6.49889" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>                
+            </a>
+            <a href="https://x.com/brendaneich" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z" stroke="#181C29" stroke-width="1.5"/>
+                <path d="M20 3L4 21" stroke="#181C29" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>                
+            </a>
+          </div>
+          <p class="footer__rights">© Copyright 2025, All Rights Reserved</p>
+          <a href="https://rs.school/" target="_blank"><p class="footer__author">Made in Rolling Scopes School</p></a>
+        </section>
+      </div>
+    </footer>
+    <div class="modal" id="modal">
+      <div class="modal__body">
+        <div class="modal__content"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
